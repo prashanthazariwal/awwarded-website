@@ -230,11 +230,16 @@ body a {
 
 #page1 h1 {
   font-size: 15.8vw;
+  font-weight: 700;
   text-transform: uppercase;
-  font-family: futura;
   line-height: 14vw;
   letter-spacing: -8px;
+  font-family: helvetica;
+  cursor: default;
 }
+#page1 h1::selection{
+  user-select: none;
+} 
 
 #page1 #h1wrap {
   display: flex;
