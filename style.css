@@ -77,7 +77,7 @@ body a {
 }
 #icons #cart .ri-shopping-cart-line:hover{
   scale: 1;
-  rotate: 30deg;
+  rotate: -10deg;
 }
 #icons #menuIcon .ri-menu-line{
   position: absolute;
