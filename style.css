@@ -863,3 +863,11 @@ body a {
     font-weight: 500;
   }
 }
+
+@media (max-height: 669px) {
+  #navMenu #right .link a{
+    font-size: 2rem;
+    line-height: 1.8rem;
+    
+  }
+}
