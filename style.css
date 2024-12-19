@@ -110,6 +110,90 @@ body a {
   display: none;
   font-size: 18px;
 }
+#cartMenu {
+  width: 100%;
+  height: 0vh;
+  background-color: #000;
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  top: -120%;
+  left: 0%;
+  z-index: 9;
+  overflow: hidden;
+}
+#cartMenu #upperDiv{
+  width: 100%;
+  height: 68%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items:center ;
+  gap: 2rem;
+}
+#cartMenu #upperDiv h2{
+  font-family: helvetica;
+margin-top: 8rem;
+color: #fff;
+}
+#cartMenu #upperDiv #button{
+  font-family: helvetica;
+  border: 1px solid white;
+  padding: 1.8rem 5.5rem;
+  border-radius: 50px;
+  color: #fff;
+  background-color: #000;
+  font-size: 0.8rem;
+}
+#cartMenu #upperDiv #button:hover{
+  color: #000;
+  background-color: #fff;
+  transition-duration: 0.8;
+}
+#cartMenu #lowerDiv {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 32%;
+}
+#cartMenu #lowerDiv hr{
+  margin-top: 4px;
+}
+#cartMenu #lowerDiv .elm{
+  display: flex;
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+#cartMenu #lowerDiv .elm h2{
+  margin-right: 20px;
+  font-family: helvetica;
+  font-size: 13vh;
+  display: inline-block;
+  -webkit-text-stroke: 1px #fff;
+  color: transparent;
+  font-weight: 400;
+  text-transform: uppercase;
+  animation-name: anime2;
+  animation-duration: 15s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+}
+#cartMenu #lowerDiv #elm2 h2{
+  animation-name: anime2;
+  animation-duration: 15s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  animation-direction: reverse;
+}
+@keyframes anime2 {
+  from{
+    transform: translateX(0);
+  }
+  to{
+    transform: translateX(calc(-100% - 24px) );
+  }
+}
 #navMenu {
   width: 100%;
   height: 0vh;
@@ -554,6 +638,16 @@ body a {
     align-items: center;
   }
 
+  #cartMenu #upperDiv #button{
+    padding: 1.3rem 3.5rem;
+  }
+  #cartMenu #lowerDiv hr{
+    margin-top: 4px;
+    margin-bottom: 4px;
+  }
+  #cartMenu #lowerDiv .elm h2{
+    font-size: 10vh;
+  }
   #navMenu {
     flex-direction: column-reverse;
   }

@@ -215,6 +215,31 @@ function menuOpen() {
       });
     });
   }
+  function openCartMenu(){
+    const cartIcon = document.querySelector(".ri-shopping-cart-line")
+    console.log(cartIcon)
+    
+    cartIcon.addEventListener("click", function(){
+      gsap.to("#cartMenu", {
+        top: "0%",
+        height: "85vh",
+        duration: 0.5,
+        delay: 0.2,
+      });
+      gsap.to("#links a , #navpart1 svg", {
+        color: "white",
+      });
+      gsap.to("#icons #cart .ri-shopping-cart-line", {
+        display: "none",
+        delay: 0,
+        duration: 0,
+      });
+      gsap.to("#icons #cart .ri-close-line", {
+        display: "initial",
+      });
+    })
+  }
+  
 locomotiveanimation();
 navbaranimation();
 videocnanimation();
@@ -222,7 +247,31 @@ lodinganimationh1();
 cursorAnimation();
 menuclose();
 menuOpen();
+openCartMenu();
 
+const cartMenuCloseIcon = document.querySelector("#icons #cart .ri-close-line");
+
+cartMenuCloseIcon.addEventListener("click", function(){
+  gsap.to("#cartMenu", {
+    top: "-120%",
+      height: "0vh",
+      duration: 0.5,
+      delay: 0.2,
+  });
+  gsap.to("#links a , #navpart1 svg", {
+    color: "black",
+  });
+  gsap.to("#icons #cart .ri-shopping-cart-line", {
+    display: "initial",
+    delay: 0,
+    duration: 0,
+  });
+  gsap.to("#icons #cart .ri-close-line", {
+    display: "none",
+    delay: 0,
+    duration: 0,
+  });
+})
 
 
 // function lodinganimationh1(){
