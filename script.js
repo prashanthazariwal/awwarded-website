@@ -7,10 +7,12 @@ function locomotiveanimation() {
     el: document.querySelector("#main"),
     smooth: true,
     smartphone: {
-      smooth: true,
+      smooth: true, // Enable smooth scrolling for smartphones
+      breakpoint: 768, // Adjust breakpoint as needed
     },
     tablet: {
-      smooth: true,
+      smooth: true, // Enable smooth scrolling for tablets
+      breakpoint: 1024, // Adjust breakpoint as needed
     },
   });
   // each time Locomotive Scroll updates, tell ScrollTrigger to update too (sync positioning)
@@ -291,4 +293,8 @@ menuOpen();
 openCartMenu();
 closeCartMenu();
 
-
+if (window.innerWidth < 768) {
+  document.querySelector("#main").style.overflowY = "auto"; // Enable native scrolling
+} else {
+  locomotiveanimation(); // Use your Locomotive Scroll setup
+}
