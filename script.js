@@ -101,6 +101,18 @@ function videocnanimation() {
       top: dets.y - 80,
     });
   });
+  videocon.addEventListener("touchstart", function () {
+    gsap.to(playbtn, {
+      opacity: 1,
+      scale: 1,
+    });
+  });
+  videocon.addEventListener("touchend", function () {
+    gsap.to(playbtn, {
+      opacity: 0,
+      scale: 0,
+    });
+  });
 }
 function lodinganimationh1() {
   var tl = gsap.timeline();
