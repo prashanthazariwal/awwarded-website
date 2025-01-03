@@ -217,7 +217,6 @@ function menuOpen() {
   }
   function openCartMenu(){
     const cartIcon = document.querySelector(".ri-shopping-cart-line")
-    console.log(cartIcon)
     
     cartIcon.addEventListener("click", function(){
       gsap.to("#cartMenu", {
@@ -239,7 +238,31 @@ function menuOpen() {
       });
     })
   }
+  function closeCartMenu (){
+    const cartMenuCloseIcon = document.querySelector("#icons #cart .ri-close-line");
   
+    cartMenuCloseIcon.addEventListener("click", function(){
+      gsap.to("#cartMenu", {
+        top: "-120%",
+          height: "0vh",
+          duration: 0.5,
+          delay: 0.2,
+      });
+      gsap.to("#links a , #navpart1 svg", {
+        color: "black",
+      });
+      gsap.to("#icons #cart .ri-shopping-cart-line", {
+        display: "initial",
+        delay: 0,
+        duration: 0,
+      });
+      gsap.to("#icons #cart .ri-close-line", {
+        display: "none",
+        delay: 0,
+        duration: 0,
+      });
+    })
+  }
 locomotiveanimation();
 navbaranimation();
 videocnanimation();
@@ -248,30 +271,7 @@ cursorAnimation();
 menuclose();
 menuOpen();
 openCartMenu();
-
-const cartMenuCloseIcon = document.querySelector("#icons #cart .ri-close-line");
-
-cartMenuCloseIcon.addEventListener("click", function(){
-  gsap.to("#cartMenu", {
-    top: "-120%",
-      height: "0vh",
-      duration: 0.5,
-      delay: 0.2,
-  });
-  gsap.to("#links a , #navpart1 svg", {
-    color: "black",
-  });
-  gsap.to("#icons #cart .ri-shopping-cart-line", {
-    display: "initial",
-    delay: 0,
-    duration: 0,
-  });
-  gsap.to("#icons #cart .ri-close-line", {
-    display: "none",
-    delay: 0,
-    duration: 0,
-  });
-})
+closeCartMenu();
 
 
 // function lodinganimationh1(){
@@ -293,3 +293,35 @@ cartMenuCloseIcon.addEventListener("click", function(){
 // })
 // }
 // lodinganimationh1();
+
+
+// [[[[[[[[[[[[[[[[[[[[[[[[[]]]]]]]]]]]]]]]]]]]]]]]]]
+
+// const details = document.querySelectorAll('.dets');
+// console.log(details)
+
+// const detailContainer = document.querySelector("#page2 .elem .dets .lowerDiv")
+
+// details.forEach((det)=>{
+//   det.addEventListener('mouseover', function(){
+//     gsap.to(detailContainer,{
+//        height: "200px",
+//        duration: 0.2
+//     })
+//   })
+// })
+// [[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]
+// const footerLeft  = document.querySelector("#footer #upperDiv #left h2")
+// console.log(footerLeftH2)
+
+// gsap.from(footerLeftH2, {
+//   x:-120,
+//   duration :1,
+//   scrollTrigger: {
+//     trigger: '#footer',
+//     markers : true,
+//     start : "top 60%",
+//     end : "top 30%",
+//     ease: 'linear',
+//   }
+// })
