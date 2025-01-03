@@ -6,6 +6,12 @@ function locomotiveanimation() {
   const locoScroll = new LocomotiveScroll({
     el: document.querySelector("#main"),
     smooth: true,
+    smartphone: {
+      smooth: true,
+    },
+    tablet: {
+      smooth: true,
+    },
   });
   // each time Locomotive Scroll updates, tell ScrollTrigger to update too (sync positioning)
   locoScroll.on("scroll", ScrollTrigger.update);
@@ -274,54 +280,3 @@ openCartMenu();
 closeCartMenu();
 
 
-// function lodinganimationh1(){
-//     var tl=gsap.timeline();
-//     gsap.from("#page1 h1",{
-//         y:100,
-//         opacity:0,
-//         delay:0.5,
-//         duration:0.5,
-//         stagger:0.4
-//     })
-
-// gsap.from("#video-container",{
-//     y:100,
-//     opacity:0,
-//     delay:0.5,
-//     duration:0.5,
-//     stagger:0.4
-// })
-// }
-// lodinganimationh1();
-
-
-// [[[[[[[[[[[[[[[[[[[[[[[[[]]]]]]]]]]]]]]]]]]]]]]]]]
-
-// const details = document.querySelectorAll('.dets');
-// console.log(details)
-
-// const detailContainer = document.querySelector("#page2 .elem .dets .lowerDiv")
-
-// details.forEach((det)=>{
-//   det.addEventListener('mouseover', function(){
-//     gsap.to(detailContainer,{
-//        height: "200px",
-//        duration: 0.2
-//     })
-//   })
-// })
-// [[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]
-// const footerLeft  = document.querySelector("#footer #upperDiv #left h2")
-// console.log(footerLeftH2)
-
-// gsap.from(footerLeftH2, {
-//   x:-120,
-//   duration :1,
-//   scrollTrigger: {
-//     trigger: '#footer',
-//     markers : true,
-//     start : "top 60%",
-//     end : "top 30%",
-//     ease: 'linear',
-//   }
-// })
